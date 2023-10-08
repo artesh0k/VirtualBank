@@ -13,9 +13,9 @@ public interface CustomerService {
 
     boolean isLoginCorrect(String login, String password);
 
-    boolean isTheSameUser(String login);
+    boolean isTheSameCustomer(String login);
 
-    void removeCustomer(Customer customer);
+    void removeCustomer(String login);
 
     void reset();
 }

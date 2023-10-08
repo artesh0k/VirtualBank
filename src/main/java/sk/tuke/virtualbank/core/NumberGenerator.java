@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class NumberGenerator {
 
-    public String generateCardNumber() {
+    public String generateIBAN() {
         Random random = new Random();
         return "SK" + random.nextInt(1000000) + "000000" + random.nextInt(1000000000) + random.nextInt(10);
     }

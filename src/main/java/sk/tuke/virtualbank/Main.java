@@ -8,10 +8,10 @@ public class Main {
         System.out.println("Hello world!");
 
         NumberGenerator numberGenerator = new NumberGenerator();
-        System.out.println(numberGenerator.generateCardNumber());
+        System.out.println(numberGenerator.generateIBAN());
         System.out.println(numberGenerator.generateEmailCode());
 
-        Accountlol account = new Accountlol(numberGenerator.generateCardNumber(), 1000000.0);
+        Accountlol account = new Accountlol(numberGenerator.generateIBAN(), 1000000.0);
         System.out.println(account.Pay(10000));
         System.out.println(account.getMoney());
 

@@ -1,4 +1,4 @@
-package sk.tuke.virtualbank;
+package sk.tuke.virtualbank.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

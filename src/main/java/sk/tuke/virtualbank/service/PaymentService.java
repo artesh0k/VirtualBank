@@ -14,8 +14,6 @@ public interface PaymentService {
 
     boolean isPaymentPossible(Payment payment);
 
-    void removePayment(Payment payment);
-
     void reset();
 
 }

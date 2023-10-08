@@ -11,7 +11,9 @@ public interface AccountService {
 
     List<Account> getAccounts(Customer customer);
 
-    void removeAccount(Account account);
+    void removeAccount(String IBAN);
+
+    boolean isTheSameIBAN(String IBAN);
 
     void reset();
 
