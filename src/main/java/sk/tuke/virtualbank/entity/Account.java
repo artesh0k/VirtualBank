@@ -1,5 +1,6 @@
 package sk.tuke.virtualbank.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -11,6 +12,7 @@ public class Account {
     @GeneratedValue
     private int accountId;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name="customer_id", nullable=false)
     private Customer customer;

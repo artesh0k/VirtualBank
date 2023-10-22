@@ -25,6 +25,7 @@ public class Console {
 
     @Autowired
     private NumberGenerator numberGenerator;
+
     public void play() {
         Customer customer1 = new Customer("v1","v1","email1", "login1",
                 "password1", false, new Date());
@@ -57,14 +58,14 @@ public class Console {
         accountService.addAccount(account1);
         accountService.addAccount(account2);
         accountService.addAccount(account3);
-
-        Payment payment1 = new Payment(account1, account2, 3,null, null, null,"hi", new Date());
-        Payment payment2 = new Payment(account1, account3, 100,null, null, null,"hi", new Date());
-
-        System.out.println(paymentService.isPaymentPossible(payment1));
-        System.out.println(paymentService.isPaymentPossible(payment2));
-
-        paymentService.addPayment(payment1);
+//
+//        Payment payment1 = new Payment(account1, account2, 3,null, null, null,"hi", new Date());
+//        Payment payment2 = new Payment(account1, account3, 100,null, null, null,"hi", new Date());
+//
+//        System.out.println(paymentService.isPaymentPossible(payment1));
+//        System.out.println(paymentService.isPaymentPossible(payment2));
+//
+//        paymentService.addPayment(payment1);
 //        paymentService.addPayment(payment2);
 
     }

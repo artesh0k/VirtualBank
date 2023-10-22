@@ -1,5 +1,6 @@
 package sk.tuke.virtualbank.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -11,6 +12,7 @@ public class Customer {
     @GeneratedValue
     private int customerId;
 
+    @JsonManagedReference
     @OneToMany(mappedBy="customer", fetch = FetchType.EAGER)
     private Set<Account> accounts;
 
@@ -30,7 +32,7 @@ public class Customer {
     private String password;
 
     @Column(nullable = false)
-    private boolean admin;
+    private boolean isAdmin;
 
     @Column(nullable = false)
     private Date createdAt;
@@ -38,13 +40,13 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String name, String surname, String email, String login, String password, boolean admin, Date createdAt) {
+    public Customer(String name, String surname, String email, String login, String password, boolean isAdmin, Date createdAt) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.login = login;
         this.password = password;
-        this.admin = admin;
+        this.isAdmin = isAdmin;
         this.createdAt = createdAt;
     }
 
@@ -101,11 +103,11 @@ public class Customer {
     }
 
     public boolean isAdmin() {
-        return admin;
+        return isAdmin;
     }
 
     public void setAdmin(boolean admin) {
-        this.admin = admin;
+        this.isAdmin = admin;
     }
 
     public Date getCreatedAt() {
@@ -126,7 +128,7 @@ public class Customer {
                 ", email='" + email + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
-                ", admin=" + admin +
+                ", admin=" + isAdmin +
                 ", createdAt=" + createdAt +
                 '}';
     }
